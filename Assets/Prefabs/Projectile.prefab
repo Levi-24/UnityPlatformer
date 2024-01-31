@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 3970570001387439194}
   - component: {fileID: 1191075628954704413}
   - component: {fileID: 3559090238342125653}
+  - component: {fileID: 2509910970548324572}
   m_Layer: 0
   m_Name: ProjectilePS
   m_TagString: Untagged
@@ -4974,6 +4975,19 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &2509910970548324572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2739826789278000907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1868593fe67e9f3428aff944f7c3be27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aliveTime: 5
 --- !u!1 &4314232660039415416
 GameObject:
   m_ObjectHideFlags: 0
