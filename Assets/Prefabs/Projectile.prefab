@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5139491831103656211}
   - component: {fileID: 4404831419103185698}
   - component: {fileID: 2380697544268685046}
+  - component: {fileID: 6752862755510160648}
   m_Layer: 0
   m_Name: Missle
   m_TagString: Untagged
@@ -130,6 +131,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &6752862755510160648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235620308561394949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1868593fe67e9f3428aff944f7c3be27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aliveTime: 3
 --- !u!1 &2739826789278000907
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +193,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -999,9 +1013,9 @@ ParticleSystem:
     serializedVersion: 4
     rateOverTime:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 10
+      minMaxState: 3
+      scalar: 3
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4970,6 +4984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 446387247269308063}
   - component: {fileID: 6557422320286921653}
+  - component: {fileID: 5948885491279115898}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -5009,7 +5024,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -5021,3 +5036,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5948885491279115898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4314232660039415416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35ebca1f19048b448a351f4506987c5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 15
