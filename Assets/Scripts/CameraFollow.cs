@@ -19,7 +19,12 @@ public class CameraFollow : MonoBehaviour
 
     private void FixedUpdate()
     {
-        isFacingRight = target.localScale.x > 0;
+        if (isFacingRight != target.localScale.x > 0)
+        {
+            isFacingRight = target.localScale.x > 0;
+            offset.x += target.localScale.x > 0 ? 15f : -15;
+        }
+
         Vector3 targetPosition = target.position + offset;
         transform.position = Vector3.Lerp(transform.position, targetPosition, delay * Time.deltaTime);
 
