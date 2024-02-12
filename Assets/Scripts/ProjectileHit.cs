@@ -12,13 +12,18 @@ public class ProjectileHit : MonoBehaviour
         projectileController = GetComponentInParent<ProjectileController>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D target)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Destroyable"))
+        if (target.gameObject.layer == LayerMask.NameToLayer("Hitable"))
         {
             projectileController.Stop();
             Instantiate(hitEffect, transform.position, transform.rotation);
             Destroy(gameObject);
+        }
+        if (target.CompareTag("Enemy"))
+        {
+            EnemyHealth enemyhealth = target.gameObject.GetComponent<EnemyHealth>();
+            enemyhealth.takeDamage(damage);
         }
     }
 }
