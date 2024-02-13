@@ -740,6 +740,7 @@ GameObject:
   - component: {fileID: 1248429187}
   - component: {fileID: 1248429190}
   - component: {fileID: 1248429191}
+  - component: {fileID: 1248429192}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -965,6 +966,20 @@ MonoBehaviour:
     m_Bits: 8
   GunMuzzle: {fileID: 1830428502}
   RocketPrefab: {fileID: 4314232660039415416, guid: ca72b588c39d378459ec93463b7f4469, type: 3}
+--- !u!114 &1248429192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248429184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46e2d1de5f8faf4d87b44a2556a4de6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodDrops: {fileID: 1883609532048163507, guid: d7a7d88d9c20d964084939f7927ba78d, type: 3}
+  maxHealth: 10
 --- !u!1 &1676668569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,6 +1189,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3828652627904447581
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1736294333887979405, guid: d7a7d88d9c20d964084939f7927ba78d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -298.42023
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736294333887979405, guid: d7a7d88d9c20d964084939f7927ba78d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.466208
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736294333887979405, guid: d7a7d88d9c20d964084939f7927ba78d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736294333887979405, guid: d7a7d88d9c20d964084939f7927ba78d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736294333887979405, guid: d7a7d88d9c20d964084939f7927ba78d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736294333887979405, guid: d7a7d88d9c20d964084939f7927ba78d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736294333887979405, guid: d7a7d88d9c20d964084939f7927ba78d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736294333887979405, guid: d7a7d88d9c20d964084939f7927ba78d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736294333887979405, guid: d7a7d88d9c20d964084939f7927ba78d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736294333887979405, guid: d7a7d88d9c20d964084939f7927ba78d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883609532048163507, guid: d7a7d88d9c20d964084939f7927ba78d, type: 3}
+      propertyPath: m_Name
+      value: BloodDropsParticleSystem
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d7a7d88d9c20d964084939f7927ba78d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1186,3 +1258,4 @@ SceneRoots:
   - {fileID: 1248429186}
   - {fileID: 207429577}
   - {fileID: 303213355}
+  - {fileID: 3828652627904447581}
