@@ -7,13 +7,16 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private GameObject bloodDrops;
     [SerializeField] private Slider healthBar;
     [SerializeField] private Image hitIndicator;
+    [SerializeField] private AudioClip playerGrunt;
     [SerializeField] private float maxHealth = 10f;
     [SerializeField] private float fadeSmooth = 2;
     private float currentHealth;
+    private AudioSource audio;
     private bool takeDamage;
 
     private void Start()
     {
+        audio = GetComponent<AudioSource>();
         healthBar.maxValue = maxHealth;
         healthBar.value = maxHealth;
         currentHealth = maxHealth;
@@ -25,6 +28,7 @@ public class PlayerHealth : MonoBehaviour
         if (takeDamage)
         {
             hitIndicator.color = new(255, 255, 255, .8f);
+            audio.PlayOneShot(playerGrunt);
         }
         else
         {
